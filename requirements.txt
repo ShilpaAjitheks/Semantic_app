@@ -1,4 +1,8 @@
 streamlit
 scikit-learn==1.0.2
 pillow
-pickle
+sentence_transformers
+nltk
+spacy
+string
+re
