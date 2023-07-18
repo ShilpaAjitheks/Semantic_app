@@ -56,7 +56,7 @@ model = SentenceTransformer(model_name)
 
 # Streamlit app code
 st.title("Semantic Similarity Analysis App")
-st.markdown("By ABC")
+st.markdown("By Shilpa Ajith")
 image = Image.open("semantic_similarity.png")
 st.image(image, use_column_width=True)
 
