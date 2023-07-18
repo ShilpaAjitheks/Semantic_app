@@ -4,5 +4,4 @@ pillow
 sentence_transformers
 nltk
 spacy
-string
 re
