@@ -35,14 +35,14 @@ def clean_text(text):
         text="".join([i for i in text if i not in string.punctuation])
         text = re.sub('\S*\d\S*\s*','', text).strip()
     return text
-def tokenization(text):
+def nltk_tokenization(text):
     if isinstance(text, str):
         tokens = re.split('\W+', text)
         tokens = [wordnet_lemmatizer.lemmatize(token) for token in tokens if token.lower() not in stopwords]
         output = " ".join(tokens)
         return output
     return text
-def lemmatizer(text):
+def spacy_lemmatizer(text):
     if isinstance(text, str):
         doc = nlp(text)
         sent = [token.lemma_ for token in doc if not token.text in set(stopwords1)]
@@ -71,10 +71,10 @@ if st.button("Predict"):
         
         user_input1 = clean_text(user_input1)
         user_input2 = clean_text(user_input2)
-        user_input1 = tokenization(user_input1)
-        user_input2 = tokenization(user_input2)
-        user_input1 = lemmatizer(user_input1)
-        user_input2 = lemmatizer(user_input2)
+        user_input1 = nltk_tokenization(user_input1)
+        user_input2 = nltk_tokenization(user_input2)
+        user_input1 = spacy_lemmatizer(user_input1)
+        user_input2 = spacy_lemmatizer(user_input2)
         
         sentence_vec1 = model.encode([user_input1])[0]
         sentence_vec2 = model.encode([user_input2])[0]
