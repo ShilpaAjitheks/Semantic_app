@@ -13,7 +13,7 @@ from sentence_transformers import SentenceTransformer
 from sklearn.preprocessing import MinMaxScaler
 scaler = MinMaxScaler()
 # Fit the scaler with the data range you want to scale
-similarity_range = (-1, 1)  # Range of similarity scores
+similarity_range = (0, 1)  # Range of similarity scores
 scaler.fit(np.reshape(similarity_range, (2, 1)))  # Fit the scaler with the specified range
 
 import string
