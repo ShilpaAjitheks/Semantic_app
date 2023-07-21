@@ -51,8 +51,12 @@ def spacy_lemmatizer(text):
 
 
 # Load the saved model
-model_name='sentence-transformers/all-mpnet-base-v2'
-model = SentenceTransformer(model_name)
+#Using st.cache to load model only once
+@st.cache
+def load_model():
+	  return SentenceTransformer('sentence-transformers/all-mpnet-base-v2')
+
+model = load_model()
 
 # Streamlit app code
 st.title("Semantic Similarity Analysis App")
