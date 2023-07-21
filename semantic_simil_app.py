@@ -52,7 +52,7 @@ def spacy_lemmatizer(text):
 
 # Load the saved model
 #Using st.cache to load model only once
-@st.cache(ignore_hash=True)
+@st.cache(allow_output_mutation=True)
 def load_model():
 	  return SentenceTransformer('sentence-transformers/all-mpnet-base-v2')
 
