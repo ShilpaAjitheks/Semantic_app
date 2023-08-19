@@ -22,8 +22,6 @@ The data contains a pair of paragraphs. These text paragraphs are randomly sampl
 
 <h2>Guideline to Access Project</h2>
 
-Cardiovascular_Disease_Prediction_ folder inside this Repository(Cardiovascular-disease-prediction) contains cardiovascu.ipynb notebook.You people can simply access the notebook and use.
-Python(.py) file of the same also is provided.
-cardio_train.csv is our dataset in csv format.
+Go for the semantic_simil_app.py file.There is all you needed.For visualisation things go to Semantic_simil.ipynb
 
 
